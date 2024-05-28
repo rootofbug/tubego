@@ -374,7 +374,11 @@ header .icons #menu-bars{
 }
 
 
-
+/* Control the size of the logo image within the .copyright container */
+.copyright .logo img {
+    max-width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
 
 
 
