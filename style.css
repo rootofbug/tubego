@@ -74,16 +74,19 @@ header{
     letter-spacing: .1rem;
 }
 
-header .logo{
-    color: #fff;;
+.logo {
+    display: flex;
+    align-items: center;
+    /* Optional: Adjust size of the image */
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
-header .logo i{
-    color: var(--red);
-
+.logo img {
+    max-height: 40px; /* Adjust the height as needed */
+    /* Optional: Adjust other properties as needed */
 }
+
 
 header .navbar a{
     font-size: 1.7rem;
