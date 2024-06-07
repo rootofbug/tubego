@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tubeGO - Watch Movies and Sports</title>
+	<link rel="icon" type="image/png" href="fav.png">
+    <style>
+        /* CSS styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #FFFFFF;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #E50914;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+		
+		.hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .buttons .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 30px;
+            margin-right: 20px;
+            border: 2px solid #FFFFFF;
+            color: #FFFFFF;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .buttons .btn:hover {
+            background-color: #E50914;
+            border-color: #E50914;
+        }
+
+        .featured {
+            padding: 80px 0;
+            background-color: #3b0505;
+        }
+
+        .featured h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .movie, .sport {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .movie img, .sport img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .subscription {
+            background-color: #181818;
+            color: #FFFFFF;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .subscription h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .subscription input[type="email"] {
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .subscription button {
+            padding: 15px 30px;
+            border: none;
+            background-color: #E50914;
+            color: #FFFFFF;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscription button:hover {
+            background-color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="tubeGO Logo" class="logo">
+            <nav>
+              <!--  <ul>
+                    <li><a href="./movies/" class="active">Movies</a></li>
+                    <li><a href="./sports/">Sports</a></li>
+                </ul> -->
+            </nav> 
+        </div>
+    </header>
+    <section class="hero">
+	<video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <h1>Welcome to tubeGO</h1>
+            <p>Your ultimate destination for movies and sports streaming.</p>
+            <div class="buttons">
+                <a href="./movies/" class="btn movies">Movies</a>
+                <a href="./sports/" class="btn sports">Sports</a>
+            </div>
+        </div>
+    </section>
+    <section class="featured">
+        <div class="container">
+            <h2>Featured Movies</h2>
+            <div class="movie">
+                <img src="movie1.jpg" alt="Toofan 2024">
+                <h3>Toofan 2024</h3>
+            </div>
+            <div class="movie">
+                <img src="movie2.jpg" alt="Movie 2">
+                <h3>Animal 2023</h3>
+            </div>
+        </div>
+    </section>
+    <section class="featured">
+        <div class="container">
+            <h2>Featured Sports Events</h2>
+            <div class="sport">
+                <img src="sport1.jpg" alt="Sport Event 1">
+                <h3>Sport Event</h3>
+            </div>
+            <div class="sport">
+                <img src="sport2.jpg" alt="Sport Event 2">
+                <h3>Sport Event</h3>
+            </div>
+        </div>
+    </section>
+    <section class="subscription">
+        <div class="container">
+            <h2>Subscribe to tubeGO Newsletter</h2>
+            <p>Subscribe to our newsletter to receive updates on the latest movies and sports events.</p>
+            <form>
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript code - This is just a placeholder for potential future functionalities
+    </script>
+</body>
+</html>
