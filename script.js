@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             if (type === 'normal') {
                 videoData = [
-                    { title: 'Normal Video 1', src: 'normal/sex 1.mp4' },
-                    { title: 'Normal Video 2', src: 'normal/sex 2.mp4' }
+                    { title: 'Sex 1', src: 'normal/sex 1.mp4' },
+                    { title: 'Sex 2', src: 'normal/sex 2.mp4' }
                 ];
             } else if (type === 'gay') {
                 videoData = [
