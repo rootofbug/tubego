@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    display: flex;
+    align-items: center; /* Vertically align items in the center */
+    justify-content: space-between; /* Add space between logo and search bar */
+    height: 80px; /* Set your desired header height */
+    padding: 0 20px; /* Optional: Add padding for spacing */
+    background-color: #222222; /* Example background color */
+}
+
+
+
+
+.logo img {
+    height: 200px; /* Adjust the height as needed */
+    width: auto;
+}
+
+.logo img:hover {
+    color: #d76b1d; /* Color change on hover */
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+#search-input:focus {
+    box-shadow: 0 0 5px #ed7020; /* Glow effect on focus */
+}
+
+#video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.video-card {
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+}
+
+.video-card h3 {
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 0 10px;
+    text-align: center;
+    color: #ed7020; /* Title color */
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #222;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+    color: #ed7020; /* Modal title color */
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #ed7020;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #d76b1d;
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #444;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #search-input {
+        width: 80%; /* Full width on mobile */
+        margin: 0 auto;
+    }
+
+    .video-card h3 {
+        font-size: 14px; /* Smaller title size for mobile */
+    }
+}

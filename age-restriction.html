@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Restriction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #ed7020; /* Use the same color as the main site */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.5; /* Improved readability */
+        }
+
+        .redirect-button {
+            padding: 15px 30px;
+            background-color: #ed7020;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .redirect-button:hover {
+            background-color: #d76b1d; /* Darker shade on hover */
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px; /* Adjusted for mobile */
+            }
+
+            p {
+                font-size: 16px; /* Adjusted for mobile */
+            }
+
+            .redirect-button {
+                width: 80%; /* Full width on mobile */
+                font-size: 16px; /* Font size adjusted for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Age Restriction</h1>
+        <p>If you are under 18, watching adult content is not good for you. This content is intended only for adults to enjoy.</p>
+        <p>If you are 18 or older, click the button below to watch adult videos.</p>
+        <a href="index.html"><button class="redirect-button">I am 18 or older</button></a>
+    </div>
+</body>
+</html>
