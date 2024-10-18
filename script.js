@@ -1,4 +1,3 @@
-// Import the necessary Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { getFirestore, collection, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
@@ -32,7 +31,7 @@ submitBtn.addEventListener('click', async () => {
             longUrl: longUrl
         });
 
-        const shortUrl = `https://tubego.xyz/${shortUrlId}`;
+        const shortUrl = `https://yourdomain.com/${shortUrlId}`; // Update this to your actual domain
         shortUrlDisplay.innerText = `Short URL: ${shortUrl}`;
     } else {
         alert("Please enter a valid URL.");
@@ -50,18 +49,16 @@ function generateShortUrlId(length = 6) {
 }
 
 // Function to handle redirects based on short URL
-window.onload = () => {
-    const path = window.location.pathname.split('/').pop();
-    if (path) {
-        const docRef = doc(db, 'urls', path);
-        getDoc(docRef).then((doc) => {
-            if (doc.exists()) {
-                window.location.href = doc.data().longUrl;
-            } else {
-                console.error('No such document!');
-            }
-        }).catch((error) => {
-            console.error('Error getting document:', error);
-        });
-    }
-};
+const path = window.location.pathname.split('/').pop();
+if (path) {
+    const docRef = doc(db, 'urls', path);
+    getDoc(docRef).then((doc) => {
+        if (doc.exists()) {
+            window.location.href = doc.data().longUrl;
+        } else {
+            console.error('No such document!');
+        }
+    }).catch((error) => {
+        console.error('Error getting document:', error);
+    });
+}
