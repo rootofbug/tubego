@@ -31,7 +31,7 @@ submitBtn.addEventListener('click', async () => {
             longUrl: longUrl
         });
 
-        const shortUrl = `https://yourdomain.com/${shortUrlId}`; // Update this to your actual domain
+        const shortUrl = `https://tubego.xyz/${shortUrlId}`; // Update this to your actual domain
         shortUrlDisplay.innerText = `Short URL: ${shortUrl}`;
     } else {
         alert("Please enter a valid URL.");
